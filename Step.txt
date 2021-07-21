@@ -1,0 +1,25 @@
+Data processing:
+1. Open folder "Data"
+2. Signal processing, transforms experimental data (Rawdata) into EEMD/VMD data.
+   2.1 export_EEMD-SampEn_data.m  -> eemddata.mat
+   2.2 export_VMD-SampEn_data.m   -> vmddata.mat
+3. Feature extraction, three types of extracted feature: ASD, MFDFA, TDSA
+   3.1 export_RAW_ASD_MFDFA_TD    ->raw_ASD.xlsx, raw_MFDFA.xlsx, raw_TD.xlsx
+   3.2 export_EEMD_ASD_MFDFA_TD   ->EEMD_ASD.xlsx, EEMD_MFDFA.xlsx, EEMD_TD.xlsx
+   3.3 export_RAW_ASD_MFDFA_TD    ->VMD_ASD.xlsx, VMD_MFDFA.xlsx, VMD_TD.xlsx
+4. Combine features for classification
+   4.1 raw_feature                ->raw_combine.mat
+   4.2 eemd_feature               ->eemd_combine.mat
+   4.3 vmd_feature                ->vmd_combine.mat
+
+
+Classification:
+1. Copy raw_combine.mat,eemd_combine.mat and vmd_combine.mat from the folder "Data" to "classify" and open the folder "classify".
+2. Setting training and testing data set
+   2.1 raw_Train_test_set.m 
+   2.2 eemd_Train_test_set.m   
+   2.3 vmd_Train_test_set.m 
+3. Choosing Classifier
+   3.1 Classifier_ELM.m 
+   3.2 Classifier_KELM.m
+   3.3 Classifier_SBELM.m
