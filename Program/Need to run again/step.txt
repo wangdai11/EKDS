@@ -1,0 +1,6 @@
+run 
+1_export_EEMD_SampEn_data
+2_export_EEMD_ASD_MFDFA_TD
+3_eemd_features
+
+put the output results into folder “Program”，"Data" and "classify".
